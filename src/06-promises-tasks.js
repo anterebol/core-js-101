@@ -30,6 +30,15 @@
  */
 function willYouMarryMe(/* isPositiveAnswer */) {
   throw new Error('Not implemented');
+  // return new Promise((resolve) => {
+  //   if (isPositiveAnswer && typeof isPositiveAnswer === 'boolean') {
+  //     resolve = 'Hooray!!! She said "Yes"!';
+  //   } else if (!isPositiveAnswer && typeof isPositiveAnswer === 'boolean') {
+  //     resolve = 'Oh no, she said "No".';
+  //   } else {
+  //     return
+  //   }
+  // })
 }
 
 
