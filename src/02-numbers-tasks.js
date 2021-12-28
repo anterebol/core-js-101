@@ -1,4 +1,3 @@
-/* eslint-disable no-restricted-properties */
 /* *******************************************************************************************
  *                                                                                           *
  * Please read the following tutorial before implementing tasks:                              *
@@ -84,8 +83,8 @@ function getDistanceBetweenPoints(x1, y1, x2, y2) {
   } else {
     k2 = y2 - y1;
   }
-  k1 = Math.pow(k1, 2);
-  k2 = Math.pow(k2, 2);
+  k1 **= 2;
+  k2 **= 2;
   return Math.sqrt((k1 + k2));
 }
 

@@ -1,4 +1,3 @@
-/* eslint-disable no-extra-semi */
 /* *******************************************************************************************
  *                                                                                           *
  * Please read the following tutorial before implementing tasks:                              *
@@ -19,7 +18,9 @@
  *   'aa',''    => 'aa'
  *   '',  'bb'  => 'bb'
  */
-function concatenateStrings(value1, value2) { return value1 + value2; };
+function concatenateStrings(value1, value2) {
+  return value1 + value2;
+}
 /**
  * Returns the length of given string.
  *
