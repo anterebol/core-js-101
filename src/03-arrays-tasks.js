@@ -578,8 +578,9 @@ function group(/* array, keySelector, valueSelector */) {
 function selectMany(/* arr, childrenSelector */) {
   throw new Error('Not implemented');
   // const d = [];
-  // d.push(arr.map((x) => childrenSelector(x)));
-  // return d;
+  // if (Array.isArray(arr)) {
+  //   return arr.map((x) => selectMany(x, childrenSelector));
+  // } return d.push(childrenSelector(arr));
 }
 
 
@@ -622,6 +623,15 @@ function getElementByIndexes(arr, indexes) {
  */
 function swapHeadAndTail(/* arr */) {
   throw new Error('Not implemented');
+  // let x;
+  // const d = arr.reverse();
+  // const arr1 = d.splice(0, Math.round((arr.length - 1) / 2));
+  // const arr2 = d.splice(Math.floor((arr.length - 1) / 2));
+  // if (d.length % 2 !== 0) {
+  //   x = [d[(arr.length - 1) / 2]];
+  //   return arr1.reverse().concat(x, arr2);
+  // } console.log(arr1.concat(arr2.reverse()));
+  // return arr1.reverse().concat(arr2.reverse());
 }
 
 

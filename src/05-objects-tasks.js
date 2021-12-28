@@ -51,8 +51,10 @@ function getJSON(obj) {
  *    const r = fromJSON(Circle.prototype, '{"radius":10}');
  *
  */
-function fromJSON(/* proto, json */) {
-  throw new Error('Not implemented');
+function fromJSON(proto, json) {
+  const obj = JSON.parse(json);
+  const values = Object.values(obj);
+  return new proto.constructor(...values);
 }
 
 
@@ -111,6 +113,34 @@ function fromJSON(/* proto, json */) {
  */
 
 const cssSelectorBuilder = {
+  // x: '',
+  // element(value) {
+  //   return this.x + value;
+  // },
+
+  // id(value) {
+  //   return `${this.x}#${value}`;
+  // },
+
+  // class(value) {
+  //   return `${this.x}.${value}`;
+  // },
+
+  // attr(value) {
+  //   return `${this.x}[${value}]`;
+  // },
+
+  // pseudoClass(/* value */) {
+  //   throw new Error('Not implemented');
+  // },
+
+  // pseudoElement(/* value */) {
+  //   throw new Error('Not implemented');
+  // },
+
+  // combine(/* selector1, combinator, selector2 */) {
+  //   throw new Error('Not implemented');
+  // },
   element(/* value */) {
     throw new Error('Not implemented');
   },
