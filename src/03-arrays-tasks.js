@@ -336,16 +336,9 @@ function getPositivesCount(arr) {
  *   [ 'nine','eight','nine','eight'] => [ 'eight','eight','nine','nine']
  *   [ 'one','one','one','zero' ]     => [ 'zero','one','one','one' ]
  */
-function sortDigitNamesByNumericOrder(/* arr */) {
-  // function n (arr, v) {
-  //   let y = [];
-  //   v.map((x) => {
-  //     if (x)
-  //   })
-  // };
-  // const d = ['one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
-  // let v = arr.map((x) => d.indexOf(x));
-  throw new Error('Not implemented');
+function sortDigitNamesByNumericOrder(arr) {
+  const d = ['zero', 'one', 'two', 'three', 'four', 'five', 'six', 'seven', 'eight', 'nine'];
+  return arr.sort((a, b) => d.indexOf(a) - d.indexOf(b));
 }
 
 /**
@@ -442,8 +435,13 @@ function toStringList(arr) {
  *      { country: 'Russia',  city: 'Saint Petersburg' }
  *    ]
  */
-function sortCitiesArray(/* arr */) {
-  throw new Error('Not implemented');
+function sortCitiesArray(arr) {
+  return arr.sort((a, b) => {
+    if (a.country === b.country) {
+      return a.city < b.city ? -1 : 1;
+    }
+    return a.country < b.country ? -1 : 1;
+  });
 }
 
 /**
